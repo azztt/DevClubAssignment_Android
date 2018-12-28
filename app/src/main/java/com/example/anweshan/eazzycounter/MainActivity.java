@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         countTextView = (TextView) findViewById(R.id.Count);
         increaseButton = (Button) findViewById(R.id.increase);
+        resetButton = (Button) findViewById(R.id.reset);
         count = 0;
         initialize();
 
@@ -30,7 +31,12 @@ public class MainActivity extends AppCompatActivity {
                 increase();
             }
         });
-
+        resetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                reset();
+            }
+        });
 
     }
 
@@ -40,6 +46,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void increase(){
         count++;
+        countTextView.setText("" + count);
+    }
+    public void reset(){
+        count = 0;
         countTextView.setText("" + count);
     }
 }

@@ -3,4 +3,5 @@
     <!--<string name="button">Button</string>-->
     <!--<string name="button">Button</string>-->
     <string name="increase">INCREASE</string>
+    <string name="reset">RESET</string>
 </resources>
