@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">EazzyCounter</string>
+    <string name="app_name">EAZZY Counter</string>
+    <!--<string name="button">Button</string>-->
+    <!--<string name="button">Button</string>-->
+    <string name="increase">INCREASE</string>
 </resources>
