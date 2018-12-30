@@ -1,9 +1,14 @@
 package com.example.anweshan.eazzycounter;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.TypedValue;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
@@ -25,10 +30,11 @@ public class MainActivity extends AppCompatActivity {
     Button increaseButton;
     Button resetButton;
     Spinner factorSpinner;
-    TextSwitcher myTextSwitcher;
     Animation anim;
     int count;
+    int saveCount;
     int factor;
+    int saveFactor;
     ArrayList<Integer> list;
     ArrayAdapter<Integer> SpinnerAdapter;
 
@@ -84,13 +90,39 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.options,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.help:
+                launchHelpActivity();
+                return true;
+            case R.id.credits:
+                launchCreditActivity();
+                return true;
+        }
+        return true;
+    }
+
+    public void launchHelpActivity(){
+        Intent intent = new Intent(this, HelpActivity.class);
+            startActivity(intent);
+    }
+    public void launchCreditActivity(){
+        Intent intent = new Intent(this, CreditsActivity.class);
+            startActivity(intent);
+    }
     protected void initialize(){
         countTextView.setText("" + count);
         countTextView.setTextColor(Color.rgb(0,87,75));
     }
     public void increase(){
         factor = (int) factorSpinner.getSelectedItem();
-        count = count + factor;
         Animation animFadeOut = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_out);
         countTextView.startAnimation(animFadeOut);
         countTextView.setText("" + count);

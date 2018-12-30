@@ -5,15 +5,27 @@
     <string name="increase">INCREASE</string>
     <string name="reset">RESET</string>
     <string name="factor_of_increase">Factor of Increase</string>
-    <integer-array name="factor">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-    </integer-array>
+    <string name="help">Help</string>
+    <string name="credits">Credits</string>
+    <string name="help_text">
+        Select the factor of increase from the drop down list ( by default it is 1 ).
+        Click the the increase button to increase the count by the selected factor of increase.
+        Click the reset button to reset the count to 0.
+    </string>
+    <string name="help_inst">Instruction to Use</string>
+    <string name="credits_text_name">
+        Anweshan Bor
+    </string>
+    <string name="credits_text_entry">
+        2018TT10878
+    </string>
+    <string name="credits_text_Dep">
+        Textile Technology
+    </string>
+    <string name="credits_text_IIT">
+        Indian Institute of Technology, Delhi
+    </string>
+    <string name="credits_text_email">
+        tt1180878@iitd.ac.in
+    </string>
 </resources>
