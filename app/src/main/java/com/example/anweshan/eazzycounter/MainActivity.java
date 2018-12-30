@@ -123,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void increase(){
         factor = (int) factorSpinner.getSelectedItem();
+        count = count + factor;
         Animation animFadeOut = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_out);
         countTextView.startAnimation(animFadeOut);
         countTextView.setText("" + count);
